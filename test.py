@@ -1,4 +1,5 @@
-from clean_folder_jen.clean import normalize
+from clean_folder_jen.clean import *
+from pathlib import Path
 
 
-print(normalize("ганчірка"))
+main(Path(r"C:\Users\Dimka Leshko\Pictures"))

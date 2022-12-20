@@ -6,7 +6,7 @@ from sys import argv
 from glob import glob
 
 
-main_path = Path(r"d:\Разобрать")
+# main_path = Path(r"d:\Разобрать")
 
 """Tansliteration"""
 
@@ -108,7 +108,7 @@ def sort_files(folder_path):
                 print(
                     f"Moving {file_name} in {ext_list[dict_key_int][0]} folder\n")
                 os.rename(
-                    file_path, f"{main_path}\\{ext_list[dict_key_int][0]}\\{file_name}{extension}")
+                    file_path, f"{folder_path}\\{ext_list[dict_key_int][0]}\\{file_name}{extension}")
 
 
 def remove_empty_folders(folder_path):
@@ -120,8 +120,17 @@ def remove_empty_folders(folder_path):
             os.rmdir(p)
 
 
-if __name__ == "__main__":
+def main(main_path):
+    # main_path = Path(main_path)
+
     create_folders_from_list(main_path, extensions)
     sort_files(main_path)
     remove_empty_folders(main_path)
     unarchive(main_path)
+
+
+# if __name__ == "__main__":
+#     create_folders_from_list(main_path, extensions)
+#     sort_files(main_path)
+#     remove_empty_folders(main_path)
+#     unarchive(main_path)
