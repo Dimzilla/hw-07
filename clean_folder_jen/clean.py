@@ -129,8 +129,9 @@ def main(main_path):
     unarchive(main_path)
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 #     create_folders_from_list(main_path, extensions)
 #     sort_files(main_path)
 #     remove_empty_folders(main_path)
 #     unarchive(main_path)
+    main()
